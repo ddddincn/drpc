@@ -78,6 +78,8 @@ class UserService : public example::UserServiceRpc {
 int main(int argc, char* const argv[]) {
   // 初始化框架程序
   drpc::Application::init(argc, argv);
+  // 关闭控制台日志输出
+  drpc::Application::getInstance().closeConsoleLog();
   // 服务提供者
   drpc::Provider provider;
   // 让provider将UserService和本机ip:port发布到zookeeper，客户端可以从zookeeper获取方法的访问方法
