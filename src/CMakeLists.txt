@@ -4,6 +4,7 @@ set(SRC_LIST
     config.cc
     header.pb.cc
     channel.cc
+    controller.cc
     zkclient.cc
 )
 
