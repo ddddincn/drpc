@@ -38,7 +38,8 @@ void drpc::ZKClient::init() {
   zhandle_ = zookeeper_init(host.c_str(), watcher, 30000, nullptr, nullptr, 0);
   // 如果zhandle_为nullptr说明zookeeper没有成功调用IO发送链接
   if (zhandle_ == nullptr) {
-    logger_->error("zookeeper init error");
+    // logger_->error("zookeeper init error");
+    std::cout << "zookeeper init error" << std::endl;
     exit(EXIT_FAILURE);
   }
 
@@ -47,7 +48,6 @@ void drpc::ZKClient::init() {
   sem_init(&sem, 0, 0);
   zoo_set_context(zhandle_, &sem);
   sem_wait(&sem);
-  logger_->info("zookeeper init success");
 }
 
 bool drpc::ZKClient::exist(const char* path) {
