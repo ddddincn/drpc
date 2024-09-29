@@ -23,8 +23,6 @@ void drpc::Controller::SetFailed(const std::string& reason) {
 
 void drpc::Controller::StartCancel() {}
 
-void drpc::Controller::SetFailed(const std::string& reason) {}
-
 bool drpc::Controller::IsCanceled() const { return false; }
 
 void drpc::Controller::NotifyOnCancel(google::protobuf::Closure* callback) {}

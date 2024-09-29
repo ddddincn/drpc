@@ -16,7 +16,6 @@ class Controller : public google::protobuf::RpcController {
 
   // 未实现
   void StartCancel() override;
-  void SetFailed(const std::string& reason) override;
   bool IsCanceled() const override;
   void NotifyOnCancel(google::protobuf::Closure* callback) override;
 
