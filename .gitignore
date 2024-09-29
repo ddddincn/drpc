@@ -2,4 +2,4 @@
 lib
 bin
 build
-example/*.pb
+logs
