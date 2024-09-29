@@ -66,6 +66,10 @@ void drpc::Application::setLogLevel(spdlog::level::level_enum log_level) {
   logger_->set_level(log_level);
 }
 
+void drpc::Application::closeConsoleLog() {
+  logger_->sinks().at(0)->set_level(spdlog::level::off);
+}
+
 std::shared_ptr<spdlog::logger> drpc::Application::getLogger() {
   return logger_;
 }

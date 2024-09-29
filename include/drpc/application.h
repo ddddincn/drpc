@@ -22,6 +22,10 @@ class Application {
                                               spdlog::pattern_time_type::local);
   // 设置日志最低等级
   void setLogLevel(spdlog::level::level_enum log_level);
+  // 关闭console日志输出
+  void closeConsoleLog();
+
+  // 获取日志器
   std::shared_ptr<spdlog::logger> getLogger();
 
  private:
